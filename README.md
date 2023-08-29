@@ -11,7 +11,7 @@ sh setup.sh
 To install the PR:
 
 ```bash
-pip install -R requirements-pr.txt
+pip install -r requirements-pr.txt --ignore-installed
 ```
 
 # Run
