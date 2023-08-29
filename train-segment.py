@@ -8,7 +8,7 @@ from wandb.yolov8 import add_wandb_callback
 
 if __name__ == "__main__":
 
-    model = YOLO('yolov8n.yaml')
+    model = YOLO('yolov8n-seg.yaml')
 
     add_wandb_callback(
         model,
@@ -17,12 +17,13 @@ if __name__ == "__main__":
         enable_validation_logging=True,
         enable_prediction_logging=True,
         max_validation_batches=1,
-        visualize_skeleton=True
+        visualize_skeleton=True,
+        max_batch_samples=1
     )
 
     results = model.train(
-        data='coco128.yaml',
-        device=[0,1],
+        data='coco128-seg.yaml',
+        device=None,
         epochs=2,
         batch=2*2,
         workers=2

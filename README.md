@@ -11,12 +11,14 @@ sh setup.sh
 To install the PR:
 
 ```bash
-pip install -r requirements-pr.txt --ignore-installed
+BRANCH=...
+pip install git+https://github.com/geoffrey-g-delhomme/wandb.git@${BRANCH} --ignore-installed
 ```
 
 # Run
 
 ```bash
 conda activate ./.venv
-python train.py
+TASK=... # classify, detect, pose, segment
+python train-${TASK}.py
 ```

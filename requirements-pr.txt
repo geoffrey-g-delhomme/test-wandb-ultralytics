@@ -1,1 +1,0 @@
-git+https://github.com/geoffrey-g-delhomme/wandb.git@fix/ddp
