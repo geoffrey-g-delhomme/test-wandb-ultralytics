@@ -1,0 +1,4 @@
+ultralytics
+python-dotenv
+numpy
+git+https://github.com/wandb/wandb@feat/ultralytics
