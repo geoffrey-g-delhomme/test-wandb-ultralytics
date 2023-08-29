@@ -17,8 +17,7 @@ if __name__ == "__main__":
         enable_validation_logging=True,
         enable_prediction_logging=True,
         max_validation_batches=1,
-        visualize_skeleton=True,
-        max_batch_samples=1
+        visualize_skeleton=True
     )
 
     results = model.train(
